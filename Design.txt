@@ -1,0 +1,34 @@
+Class UI_Base:
+
+	string name;
+	int id;
+
+	UI_Base* parent;	
+	UI_Base* children;
+
+Class Window (UI_Base):
+	int x, y, w, h;
+	string title;
+
+	bool visible;
+
+
+Class Layout (UI_Base):
+	int padding;
+	int spacing;
+	int orientation; //vertical, horizontal, etc.
+
+	int expand_flag;
+	//other properties will have a flag here as well
+
+Class Panel (UI_Base):
+	int x, y, w, h;
+	int resize_flag; //whether the panel would resize with parent or not
+	
+
+Class Button (UI_Base):
+	int x, y, w, h;
+	string label;
+	
+	int state; //pressed, released, or clicked
+
